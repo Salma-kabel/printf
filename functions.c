@@ -42,3 +42,14 @@ int percent_specifier(char c)
 	write(1, &c, 1);
 	return (1);
 }
+
+/**
+ * percent_specifier - handles d and i specifier
+ * @c: character
+ * Return: 1 Always
+ */
+int d_and_i_specifier(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
