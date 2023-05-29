@@ -51,6 +51,7 @@ int percent_specifier(char c)
 int d_and_i_specifier(int n)
 {
 	char str1[100];
+
 	tostring(str1, n);
 	write(1, str1, strlen(str1));
 
