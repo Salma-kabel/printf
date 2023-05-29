@@ -12,6 +12,10 @@ int _printf(const char *format, ...)
 	int i, length = 0;
 
 	va_start(list, format);
+	if (format == NULL || strlen(format) == 0)
+	{
+		return(0);
+	}
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == 's' && format[i - 1] == '%')
@@ -26,5 +30,6 @@ int _printf(const char *format, ...)
 			length++;
 		}
 	}
+	va_end(list);
 	return (length);
 }
