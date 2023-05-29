@@ -26,6 +26,26 @@ char *int_to_string(int x)
 	return (s);
 }
 
+void tostring(char str[], int num)
+{
+    int i, rem, len = 0, n;
+ 
+    n = num;
+    while (n != 0)
+    {
+        len++;
+        n /= 10;
+    }
+    for (i = 0; i < len; i++)
+    {
+        rem = num % 10;
+        num = num / 10;
+        str[len - (i + 1)] = rem + '0';
+    }
+    str[len] = '\0';
+}
+
+
 /**
  * _atoi - that convert a string to an integer.
  * The number in the string can be preceded by an infinite number of characters
@@ -72,3 +92,4 @@ int _atoi(char *s)
 	return (n);
 
 }
+

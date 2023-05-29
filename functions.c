@@ -48,8 +48,11 @@ int percent_specifier(char c)
  * @c: character
  * Return: 1 Always
  */
-int d_and_i_specifier(char c)
+int d_and_i_specifier(int n)
 {
-	write(1, &c, 1);
+	char str1[100];
+	tostring(str1, n);
+	write(1, str1, strlen(str1));
+
 	return (1);
 }

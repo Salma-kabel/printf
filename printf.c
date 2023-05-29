@@ -21,7 +21,13 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i - 1] == '%')
 			length += percent_specifier(format[i]);
 		else if ((format[i] == 'd' || format[i] == 'i')  && format[i - 1] == '%')
-			length += c_specifier(va_arg(list, int));			
+		{
+			length += d_and_i_specifier(va_arg(list, int));	
+
+
+
+			
+		}
 		else if (format[i] != '%')
 		{
 			write(1, (format + i), 1);
