@@ -100,7 +100,7 @@ int _atoi(char *s)
  * @num: num
  * @base: base
  * src: https://gist.github.com/narnat/95733cd0ad7bfac0d90697292914c407
- * Return: char
+ * Return: ponter to char
  **/
 char *itoa(long int num, int base)
 {
@@ -131,7 +131,6 @@ char *itoa(long int num, int base)
 /**
  * to_upper - iconvert string to uppere case.
  * @s: string to convert
- * Return: pointer to char
  **/
 void to_upper(char *s)
 {
