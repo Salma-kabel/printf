@@ -66,3 +66,16 @@ int d_and_i_specifier(int n)
 	}
 	return (1);
 }
+
+/**
+ * percent_specifier - handles b specifier
+ * @c: character
+ * Return: 1 Always
+ */
+int b_specifier(int n)
+{
+	char *binary;
+	binary = itoa(n, 2);
+	write(1, binary, strlen(binary));
+	return (1);
+}
