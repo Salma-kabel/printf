@@ -4,7 +4,7 @@
 /**
  * b_specifier - handles b specifier
  * @n: integer
- * Return: 1 Always
+ * Return: length of pointer
  */
 int b_specifier(int n)
 {
@@ -18,7 +18,7 @@ int b_specifier(int n)
 /**
  * o_specifier - handles o specifier
  * @n: integer
- * Return: 1 Always
+ * Return: length of pointer
  */
 int o_specifier(unsigned int n)
 {
@@ -33,7 +33,7 @@ int o_specifier(unsigned int n)
 /**
  * x_specifier - handles x specifier
  * @n: integer
- * Return: 1 Always
+ * Return: length of pointer
  */
 int x_specifier(unsigned int n)
 {
@@ -42,13 +42,13 @@ int x_specifier(unsigned int n)
 	hex = itoa(n, 16);
 	write(1, hex, strlen(hex));
 
-	return (1);
+	return (strlen(hex));
 }
 
 /**
  * X_specifier - handles X specifier
  * @n: integer
- * Return: 1 Always
+ * Return: length of pointer
  */
 int X_specifier(unsigned int n)
 {
@@ -58,5 +58,5 @@ int X_specifier(unsigned int n)
 	to_upper(upper_hex);
 	write(1, upper_hex, strlen(upper_hex));
 
-	return (1);
+	return (strlen(upper_hex));
 }
