@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 		if (format == NULL || strlen(format) == 0)
 		{
 			_putchar('\n');
-			return (0);
+			return (1);
 		}
 		if (format[i] == 's' && format[i - 1] == '%')
 			length += s_specifier(va_arg(list, char *));
