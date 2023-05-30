@@ -52,8 +52,17 @@ int d_and_i_specifier(int n)
 {
 	char str1[100];
 
-	tostring(str1, n);
-	write(1, str1, strlen(str1));
+	if (n < 0)
+	{
+		_putchar('-');
+		tostring(str1, -n);
+		write(1, str1, strlen(str1));
 
+	}
+	else
+	{
+		tostring(str1, n);
+		write(1, str1, strlen(str1));
+	}
 	return (1);
 }
