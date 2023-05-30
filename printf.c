@@ -14,11 +14,6 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format == NULL || strlen(format) == 0)
-		{
-			_putchar('\n');
-			return (1);
-		}
 		if (format[i] == 's' && format[i - 1] == '%')
 			length += s_specifier(va_arg(list, char *));
 		else if (format[i] == 'c' && format[i - 1] == '%')
