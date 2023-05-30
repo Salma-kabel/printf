@@ -26,6 +26,12 @@ int _printf(const char *format, ...)
 			length += b_specifier(va_arg(list, int));
 		else if (format[i] == 'u' && format[i - 1] == '%')
 			length += u_specifier(va_arg(list, unsigned int));
+		else if (format[i] == 'o' && format[i - 1] == '%')
+			length += o_specifier(va_arg(list, unsigned int));
+		else if (format[i] == 'x' && format[i - 1] == '%')
+			length += x_specifier(va_arg(list, unsigned int));
+		else if (format[i] == 'X' && format[i - 1] == '%')
+			length += X_specifier(va_arg(list, unsigned int));
 		else if (format[i] != '%')
 		{
 			write(1, (format + i), 1);

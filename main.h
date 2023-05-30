@@ -17,12 +17,17 @@ int percent_specifier(char c);
 int d_and_i_specifier(int n);
 int b_specifier(int n);
 int u_specifier(unsigned int n);
+int o_specifier(unsigned int n);
+int x_specifier(unsigned int n);
+int X_specifier(unsigned int n);
+
 /*helpers.c*/
 char *int_to_string(int x);
 void tostring(char str[], int num);
 int _atoi(char *s);
 int _putchar(char c);
 char *itoa(long int num, int base);
+void to_upper(char *s);
 
 
 

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * percent_specifier - handles d and i specifier
+ * d_and_i_specifier - handles d and i specifier
  * @n: integer
  * Return: 1 Always
  */
@@ -25,21 +25,7 @@ int d_and_i_specifier(int n)
 }
 
 /**
- * percent_specifier - handles b specifier
- * @n: integer
- * Return: 1 Always
- */
-int b_specifier(int n)
-{
-	char *binary;
-
-	binary = itoa(n, 2);
-	write(1, binary, strlen(binary));
-	return (1);
-}
-
-/**
- * percent_specifier - handles b specifier
+ * u_specifier - handles u specifier
  * @n: integer
  * Return: 1 Always
  */
