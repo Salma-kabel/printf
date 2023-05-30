@@ -12,7 +12,7 @@ int b_specifier(int n)
 
 	binary = itoa(n, 2);
 	write(1, binary, strlen(binary));
-	return (1);
+	return (strlen(binary));
 }
 
 /**
@@ -27,7 +27,7 @@ int o_specifier(unsigned int n)
 	oct = itoa(n, 8);
 	write(1, oct, strlen(oct));
 
-	return (1);
+	return (strlen(oct));
 }
 
 /**
