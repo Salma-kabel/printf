@@ -16,6 +16,7 @@ int c_specifier(char c);
 int percent_specifier(char c);
 int d_and_i_specifier(int n);
 int b_specifier(int n);
+int u_specifier(unsigned int n);
 /*helpers.c*/
 char *int_to_string(int x);
 void tostring(char str[], int num);

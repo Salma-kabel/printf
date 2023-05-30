@@ -22,10 +22,10 @@ int _printf(const char *format, ...)
 			length += percent_specifier(format[i]);
 		else if ((format[i] == 'd' || format[i] == 'i')  && format[i - 1] == '%')
 			length += d_and_i_specifier(va_arg(list, int));
-		
 		else if (format[i] == 'b' && format[i - 1] == '%')
 			length += b_specifier(va_arg(list, int));
-		
+		else if (format[i] == 'u' && format[i - 1] == '%')
+			length += u_specifier(va_arg(list, unsigned int));
 		else if (format[i] != '%')
 		{
 			write(1, (format + i), 1);
