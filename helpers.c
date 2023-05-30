@@ -28,6 +28,11 @@ char *int_to_string(int x)
 	return (s);
 }
 
+/**
+ * tostring - converts an int to string
+ * @str: array to store the string
+ * @num: integer
+ */
 void tostring(char str[], int num)
 {
 	int i, rem, len = 0, n;

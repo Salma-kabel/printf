@@ -40,3 +40,20 @@ int u_specifier(unsigned int n)
 
 	return (strlen(ptr));
 }
+
+/**
+ * p_specifier - handles p specifier
+ * @p: pointer to void
+ * Return: length of pointer
+ */
+int p_specifier(void *p)
+{
+	char *str;
+	uintptr_t s = (uintptr_t)(void *)p;
+
+	str = itoa(s, 16);
+	_putchar('0');
+	_putchar('x');
+	write(1, str, strlen(str));
+	return (strlen(str) + 2);
+}

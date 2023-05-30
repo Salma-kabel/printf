@@ -32,6 +32,10 @@ int _printf(const char *format, ...)
 			length += x_specifier(va_arg(list, unsigned int));
 		else if (format[i] == 'X' && format[i - 1] == '%')
 			length += X_specifier(va_arg(list, unsigned int));
+		else if (format[i] == 'S' && format[i - 1] == '%')
+			length += S_specifier(va_arg(list, char *));
+		else if (format[i] == 'p' && format[i - 1] == '%')
+			length += p_specifier(va_arg(list, void *));
 		else if (format[i] != '%')
 		{
 			write(1, (format + i), 1);

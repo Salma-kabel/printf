@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include <string.h>
-
+#include <stdint.h>
 /* printf.c */
 int _printf(const char *format, ...);
 /*functions.c*/
@@ -20,7 +20,8 @@ int u_specifier(unsigned int n);
 int o_specifier(unsigned int n);
 int x_specifier(unsigned int n);
 int X_specifier(unsigned int n);
-
+int S_specifier(char *s);
+int p_specifier(void *p);
 /*helpers.c*/
 char *int_to_string(int x);
 void tostring(char str[], int num);
