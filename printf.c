@@ -10,10 +10,10 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	int i, length = 0;
-	char s[] = "NULL";
+	char s[] = "(null)";
 	if (format == NULL){
-		write(1,s,4);
-		return (4);
+		write(1,s,6);
+		return (6);
 	}
 	else if (strlen(format) == 1 && format[0] == '%')
 	{		
