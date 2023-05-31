@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 			length += S_specifier(va_arg(list, char *));
 		else if (format[i] == 'p' && format[i - 1] == '%')
 			length += p_specifier(va_arg(list, void *));
-		else if (format[i - 1] == '%')
+		else if (format[i - 1] == '%' && format[i - 2] != '%')
 		{
 			length += percent_specifier(format[i - 1]);
 			write(1, (format + i), 1);
