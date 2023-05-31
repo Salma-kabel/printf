@@ -7,8 +7,8 @@
  */
 int main(void)
 {
-	int len = _printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
-	int len2 = printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');	
+	int len =0;
+	int len2 = _printf(NULL);	
 	
 	printf("%d , %d",len,len2);
 
