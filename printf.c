@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	else if (strlen(format) == 1 && format[0] == '%')
 	{
 		_putchar('\n');
-		return (1);
+		return (0);
 	}
 	for (i = 0; format[i] != '\0'; i++)
 	{
