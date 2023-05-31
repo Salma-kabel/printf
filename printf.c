@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	int i, length = 0;
 	
 	if (format == NULL){
-		_putchar('\n');
+		write(1,NULL,0);
 		return (0);
 	}
 	else if (strlen(format) == 1 && format[0] == '%')
