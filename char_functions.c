@@ -20,7 +20,6 @@ int s_specifier(char *s)
 	}
 	else
 	{
-		printf("%d\n",s[0]);
 		write(1, s, strlen(s));
 		return (strlen(s));
 	}
