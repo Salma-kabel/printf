@@ -3,7 +3,7 @@
 /**
  * d_and_i_specifier - handles d and i specifier
  * @n: integer
- * Return: length of string 
+ * Return: length of string
  */
 int d_and_i_specifier(int n)
 {
@@ -34,6 +34,7 @@ int d_and_i_specifier(int n)
 int u_specifier(unsigned int n)
 {
 	char *ptr;
+
 	ptr = itoa(n, 10);
 	write(1, ptr, strlen(ptr));
 

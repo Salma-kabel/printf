@@ -14,7 +14,9 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == 's' && format[i - 1] == '%')
+		if (format == NULL)
+			_putchar('\n');
+		else if (format[i] == 's' && format[i - 1] == '%')
 			length += s_specifier(va_arg(list, char *));
 		else if (format[i] == 'c' && format[i - 1] == '%')
 			length += c_specifier(va_arg(list, int));
