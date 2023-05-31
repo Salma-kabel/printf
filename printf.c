@@ -12,10 +12,12 @@ int _printf(const char *format, ...)
 	int i, length = 0;
 	
 	if (format == NULL){
-		return (1);
+		_putchar('\n');
+		return (0);
 	}
 	else if (strlen(format) == 1 && format[0] == '%')
 	{		
+		_putchar('\n');
 		return (0);
 	}
 	va_start(list, format);
