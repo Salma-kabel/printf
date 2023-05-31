@@ -10,13 +10,14 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	int i, length = 0;
-	
-	if (format == NULL){
+
+	if (format == NULL)
+	{
 		return (-1);
 	}
 	else if (strlen(format) == 1 && format[0] == '%')
-	{		
-		return (0);
+	{
+		return (-1);
 	}
 	va_start(list, format);
 	for (i = 0; format[i] != '\0'; i++)
