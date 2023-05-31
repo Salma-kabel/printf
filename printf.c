@@ -12,11 +12,18 @@ int _printf(const char *format, ...)
 	int i, length = 0;
 
 	va_start(list, format);
+	if (format == NULL){
+		_putchar('\n');
+		return (0);
+	}
+	else if (strlen(format) == 1 && format[0] == '%')
+	{
+		_putchar('\n');
+		return (1);
+	}
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format == NULL)
-			_putchar('\n');
-		else if (format[i] == 's' && format[i - 1] == '%')
+		if (format[i] == 's' && format[i - 1] == '%')
 			length += s_specifier(va_arg(list, char *));
 		else if (format[i] == 'c' && format[i - 1] == '%')
 			length += c_specifier(va_arg(list, int));
@@ -38,6 +45,11 @@ int _printf(const char *format, ...)
 			length += S_specifier(va_arg(list, char *));
 		else if (format[i] == 'p' && format[i - 1] == '%')
 			length += p_specifier(va_arg(list, void *));
+		else if (format[i - 1] == '%')
+		{
+			length += percent_specifier(format[i - 1]);
+			write(1, (format + i), 1);
+		}
 		else if (format[i] != '%')
 		{
 			write(1, (format + i), 1);

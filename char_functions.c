@@ -10,10 +10,17 @@ int s_specifier(char *s)
 {
 	if (s == NULL || strlen(s) == 0)
 	{
-		return (0);
+		_putchar('(');
+		_putchar('n');
+		_putchar('u');
+		_putchar('l');
+		_putchar('l');
+		_putchar(')');
+		return (6);
 	}
 	else
 	{
+		printf("%d\n",s[0]);
 		write(1, s, strlen(s));
 		return (strlen(s));
 	}
