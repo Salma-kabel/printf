@@ -15,8 +15,7 @@ int _printf(const char *format, ...)
 		return (0);
 	}
 	else if (strlen(format) == 1 && format[0] == '%')
-	{
-		_putchar('\n');
+	{		
 		return (1);
 	}
 	va_start(list, format);
