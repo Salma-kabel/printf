@@ -7,7 +7,9 @@
  */
 int main(void)
 {
-	_printf("%");	
+	int len = _printf("%K\n");	
+	
+	printf("%d , \n",len);
 
 	return(0);
 }

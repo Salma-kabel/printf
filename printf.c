@@ -48,6 +48,7 @@ int _printf(const char *format, ...)
 		{
 			length += percent_specifier(format[i - 1]);
 			write(1, (format + i), 1);
+			length++;
 		}
 		else if (format[i] != '%')
 		{
