@@ -82,7 +82,10 @@ int S_specifier(char *s)
 				shex = itoa(n, 16);
 				to_upper(shex);
 				if (strlen(shex) == 1)
+				{
 					_putchar('0');
+					length++;
+				}
 				write(1, shex, strlen(shex));
 				length += strlen(shex);
 			}

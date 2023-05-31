@@ -49,9 +49,21 @@ int u_specifier(unsigned int n)
 int p_specifier(void *p)
 {
 	char *str;
+	char smax[]="ffffffffffffffff";
 	uintptr_t s = (uintptr_t)(void *)p;
 
+	if (p == NULL)
+	{
+		_putchar('(');
+		_putchar('n');
+		_putchar('i');
+		_putchar('l');
+		_putchar(')');
+		return (5);
+	}
 	str = itoa(s, 16);
+	if (p == (void *)0xffffffffffffffff)
+		str = smax;
 	_putchar('0');
 	_putchar('x');
 	write(1, str, strlen(str));
