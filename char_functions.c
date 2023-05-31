@@ -8,7 +8,7 @@
 
 int s_specifier(char *s)
 {
-	if (s == NULL || strlen(s) == 0)
+	if (s == NULL)
 	{
 		_putchar('(');
 		_putchar('n');
