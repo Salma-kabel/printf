@@ -8,11 +8,11 @@
  */
 int b_specifier(unsigned int n)
 {
-	char *binary;
+	char *binary_ptr;
 
-	binary = itoa(n, 2);
-	write(1, binary, strlen(binary));
-	return (strlen(binary));
+	binary_ptr = itoa(n, 2);
+	write(1, binary_ptr, strlen(binary_ptr));
+	return (strlen(binary_ptr));
 }
 
 /**
