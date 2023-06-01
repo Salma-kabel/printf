@@ -7,7 +7,7 @@
  */
 int d_and_i_specifier(int n)
 {
-	char str1[100];
+	/*char str1[100];
 	int length = 0;
 
 	if (n < 0)
@@ -23,7 +23,14 @@ int d_and_i_specifier(int n)
 		write(1, str1, strlen(str1));
 	}
 	length += strlen(str1);
-	return (length);
+	return (length);*/
+
+	char *ptr;
+
+	ptr = itoa(n, 10);
+	write(1, ptr, strlen(ptr));
+
+	return (strlen(ptr));
 }
 
 /**
