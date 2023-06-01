@@ -15,7 +15,7 @@ int s_specifier(char *s);
 int c_specifier(char c);
 int percent_specifier(char c);
 int d_and_i_specifier(int n);
-int b_specifier(int n);
+int b_specifier(unsigned int n);
 int u_specifier(unsigned int n);
 int o_specifier(unsigned int n);
 int x_specifier(unsigned int n);
