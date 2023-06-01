@@ -37,12 +37,12 @@ int o_specifier(unsigned int n)
  */
 int x_specifier(unsigned int n)
 {
-	char *hex;
+	char *hex_ptr;
 
-	hex = itoa(n, 16);
-	write(1, hex, strlen(hex));
+	hex_ptr = itoa(n, 16);
+	write(1, hex_ptr, strlen(hex_ptr));
 
-	return (strlen(hex));
+	return (strlen(hex_ptr));
 }
 
 /**
