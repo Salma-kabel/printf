@@ -52,11 +52,11 @@ int x_specifier(unsigned int n)
  */
 int X_specifier(unsigned int n)
 {
-	char *upper_hex;
+	char *upper_hex_ptr;
 
-	upper_hex = itoa(n, 16);
-	to_upper(upper_hex);
-	write(1, upper_hex, strlen(upper_hex));
+	upper_hex_ptr = itoa(n, 16);
+	to_upper(upper_hex_ptr);
+	write(1, upper_hex_ptr, strlen(upper_hex_ptr));
 
-	return (strlen(upper_hex));
+	return (strlen(upper_hex_ptr));
 }
