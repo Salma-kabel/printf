@@ -30,6 +30,4 @@ int _putchar(char c);
 char *itoa(long int num, int base);
 void to_upper(char *s);
 
-
-
 #endif

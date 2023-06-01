@@ -22,12 +22,12 @@ int d_and_i_specifier(int n)
  */
 int u_specifier(unsigned int n)
 {
-	char *ptr;
+	char *u_ptr;
 
-	ptr = itoa(n, 10);
-	write(1, ptr, strlen(ptr));
+	u_ptr = itoa(n, 10);
+	write(1, u_ptr, strlen(u_ptr));
 
-	return (strlen(ptr));
+	return (strlen(u_ptr));
 }
 
 /**
