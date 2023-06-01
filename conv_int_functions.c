@@ -6,7 +6,7 @@
  * @n: integer
  * Return: length of pointer
  */
-int b_specifier(int n)
+int b_specifier(unsigned int n)
 {
 	char *binary;
 
