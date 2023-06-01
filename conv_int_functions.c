@@ -22,12 +22,12 @@ int b_specifier(unsigned int n)
  */
 int o_specifier(unsigned int n)
 {
-	char *oct;
+	char *oct_ptr;
 
-	oct = itoa(n, 8);
-	write(1, oct, strlen(oct));
+	oct_ptr = itoa(n, 8);
+	write(1, oct_ptr, strlen(oct_ptr));
 
-	return (strlen(oct));
+	return (strlen(oct_ptr));
 }
 
 /**
