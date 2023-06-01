@@ -23,9 +23,6 @@ int X_specifier(unsigned int n);
 int S_specifier(char *s);
 int p_specifier(void *p);
 /*helpers.c*/
-char *int_to_string(int x);
-void tostring(char str[], int num);
-int _atoi(char *s);
 int _putchar(char c);
 char *itoa(long int num, int base);
 void to_upper(char *s);
