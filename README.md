@@ -9,6 +9,9 @@
 2. With a face like mine, I do better in print
 #### handle [ u, o, x, X ] specifiers.
 3. What one has not experienced, one will never understand in print
+#### Use a local buffer of 1024 chars in order to call write
 4. Nothing in fine print is ever good news
+#### handle [ S ] specifier.
 5. My weakness is wearing too much leopard print
+#### handle [ p ] specifier.
 6. How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print
