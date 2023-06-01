@@ -7,12 +7,12 @@
  */
 int d_and_i_specifier(int n)
 {
-	char *ptr;
+	char *num_ptr;
 
-	ptr = itoa(n, 10);
-	write(1, ptr, strlen(ptr));
+	num_ptr = itoa(n, 10);
+	write(1, num_ptr, strlen(num_ptr));
 
-	return (strlen(ptr));
+	return (strlen(num_ptr));
 }
 
 /**
